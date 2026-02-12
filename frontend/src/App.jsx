@@ -1,29 +1,56 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { authAPI } from './utils/api';
+
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+import Profile from './pages/Profile';
+import Settings from './pages/Settings';
+import Collections from './pages/Collections';
+import Projects from './pages/Projects';
+import Gallery from './pages/Gallery';
+import Notes from './pages/Notes';
+import Calendar from './pages/Calendar';
+import Themes from './pages/Themes';
+
+import Layout from './components/Layout';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const isAuthenticated = authAPI.isAuthenticated();
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-md">
-        <h1 className="text-3xl font-bold text-blue-600 mb-4">
-          Vite + React + Tailwind
-        </h1>
-        <div className="card">
-          <button 
-            onClick={() => setCount((count) => count + 1)}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            count is {count}
-          </button>
-        </div>
-        <p className="mt-4 text-gray-600">
-          Click the button to test React state
-        </p>
-      </div>
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route 
+          path="/login" 
+          element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <Login />} 
+        />
+        
+        <Route
+          path="/*"
+          element={
+            <ProtectedRoute>
+              <Layout>
+                <Routes>
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/profile" element={<Profile />} />
+                  <Route path="/settings" element={<Settings />} />
+                  <Route path="/collections" element={<Collections />} />
+                  <Route path="/projects" element={<Projects />} />
+                  <Route path="/gallery" element={<Gallery />} />
+                  <Route path="/notes" element={<Notes />} />
+                  <Route path="/calendar" element={<Calendar />} />
+                  <Route path="/themes" element={<Themes />} />
+                  <Route path="/" element={<Navigate to="/dashboard" replace />} />
+                </Routes>
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
