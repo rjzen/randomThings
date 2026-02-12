@@ -1,9 +1,6 @@
 # randomThings
 
 A modern full‑stack web application built with **React (Vite)**, **TailwindCSS**, **Django**, and **MySQL**.
-
-> ⚠️ *This README is temporary and serves as a preliminary overview. More detailed documentation will be added as the project evolves.*
-
 ---
 
 ## 📌 Overview
