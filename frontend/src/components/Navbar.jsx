@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { authAPI } from '../utils/api';
 import { useNavigate } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
 import { 
   UserCircleIcon, 
   Cog6ToothIcon, 
@@ -12,6 +13,7 @@ const Navbar = ({ onMenuClick }) => {
   const [user, setUser] = useState(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const navigate = useNavigate();
+  const { currentTheme } = useTheme();
 
   useEffect(() => {
     const fetchUserProfile = async () => {
@@ -39,19 +41,20 @@ const Navbar = ({ onMenuClick }) => {
   };
 
   return (
-    <nav className="bg-white shadow-sm border-b border-gray-200">
+    <nav className="bg-white shadow-sm border-b" style={{ borderBottomColor: currentTheme.primary_color }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-12">
           {/* Left side - Logo and Menu Button */}
           <div className="flex items-center">
             <button
               onClick={onMenuClick}
-              className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden"
+              className="p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 md:hidden"
+              style={{ '--tw-ring-color': currentTheme.primary_color }}
             >
               <Bars3Icon className="h-6 w-6" />
             </button>
             <div className="flex-shrink-0 ml-4 md:ml-0">
-              <h1 className="text-xl font-bold text-indigo-600">Hobby Hub</h1>
+              <h1 className="text-xl font-bold" style={{ color: currentTheme.primary_color }}>Hobby Hub</h1>
             </div>
           </div>
 
@@ -59,7 +62,7 @@ const Navbar = ({ onMenuClick }) => {
           <div className="relative">
             {user ? (
               <div className="flex items-center space-x-4">
-                <span className="hidden sm:block text-sm text-gray-700">
+                <span className="hidden sm:block text-sm" style={{ color: currentTheme.text_color }}>
                   Welcome, {user.username}
                 </span>
                 <div className="relative">
@@ -69,9 +72,13 @@ const Navbar = ({ onMenuClick }) => {
                       e.stopPropagation();
                       setDropdownOpen(!dropdownOpen);
                     }}
-                    className="flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    className="flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2"
+                    style={{ '--tw-ring-color': currentTheme.primary_color }}
                   >
-                    <div className="h-8 w-8 rounded-full bg-indigo-600 flex items-center justify-center">
+                    <div 
+                      className="h-8 w-8 rounded-full flex items-center justify-center"
+                      style={{ backgroundColor: currentTheme.primary_color }}
+                    >
                       <UserCircleIcon className="h-6 w-6 text-white" />
                     </div>
                   </button>

@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { themeAPI } from '../utils/api';
+import { themeAPI, authAPI } from '../utils/api';
+import { useTheme } from '../context/ThemeContext';
 
 const Themes = () => {
   const [themes, setThemes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showAddForm, setShowAddForm] = useState(false);
+  const [activatingTheme, setActivatingTheme] = useState(null);
+  const { currentTheme, changeTheme, refreshThemes } = useTheme();
   const [newTheme, setNewTheme] = useState({
     name: '',
     primary_color: '#6366f1',
     secondary_color: '#8b5cf6',
     background_color: '#f9fafb',
     text_color: '#111827',
+    sidebar_color: '#1f2937',
   });
 
   useEffect(() => {
@@ -38,9 +42,11 @@ const Themes = () => {
         secondary_color: '#8b5cf6',
         background_color: '#f9fafb',
         text_color: '#111827',
+        sidebar_color: '#1f2937',
       });
       setShowAddForm(false);
       fetchThemes();
+      refreshThemes();
     } catch (error) {
       console.error('Failed to create theme:', error);
     }
@@ -51,9 +57,24 @@ const Themes = () => {
       try {
         await themeAPI.deleteTheme(id);
         fetchThemes();
+        refreshThemes();
       } catch (error) {
         console.error('Failed to delete theme:', error);
       }
+    }
+  };
+
+  const handleActivateTheme = async (themeId) => {
+    setActivatingTheme(themeId);
+    try {
+      await changeTheme(themeId);
+      alert('Theme activated successfully!');
+      fetchThemes();
+    } catch (error) {
+      console.error('Failed to activate theme:', error);
+      alert('Failed to activate theme');
+    } finally {
+      setActivatingTheme(null);
     }
   };
 
@@ -166,6 +187,23 @@ const Themes = () => {
                   />
                 </div>
               </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Sidebar Color</label>
+                <div className="flex space-x-2">
+                  <input
+                    type="color"
+                    value={newTheme.sidebar_color}
+                    onChange={(e) => setNewTheme({ ...newTheme, sidebar_color: e.target.value })}
+                    className="h-10 w-20"
+                  />
+                  <input
+                    type="text"
+                    value={newTheme.sidebar_color}
+                    onChange={(e) => setNewTheme({ ...newTheme, sidebar_color: e.target.value })}
+                    className="flex-1 px-3 py-2 border border-gray-300 rounded-md"
+                  />
+                </div>
+              </div>
             </div>
             <div className="flex justify-end space-x-4 pt-4">
               <button
@@ -242,6 +280,25 @@ const Themes = () => {
                         <span className="text-sm text-gray-600">Text</span>
                       </div>
                     </div>
+
+                    {/* Activate Button */}
+                    <button
+                      onClick={() => handleActivateTheme(theme.id)}
+                      disabled={activatingTheme === theme.id || currentTheme.id === theme.id}
+                      className={`w-full mt-4 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                        currentTheme.id === theme.id
+                          ? 'bg-green-100 text-green-800 cursor-default'
+                          : 'bg-indigo-600 text-white hover:bg-indigo-700'
+                      }`}
+                      style={currentTheme.id !== theme.id ? { backgroundColor: currentTheme.primary_color } : {}}
+                    >
+                      {currentTheme.id === theme.id 
+                        ? 'Active' 
+                        : activatingTheme === theme.id 
+                          ? 'Activating...' 
+                          : 'Activate Theme'
+                      }
+                    </button>
                   </div>
                 </div>
               ))}

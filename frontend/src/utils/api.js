@@ -182,6 +182,24 @@ export const themeAPI = {
       throw error.response?.data || { error: 'Failed to delete theme' };
     }
   },
+
+  setTheme: async (themeId) => {
+    try {
+      const response = await profileApi.post('/set-theme/', { theme_id: themeId });
+      return response.data;
+    } catch (error) {
+      throw error.response?.data || { error: 'Failed to set theme' };
+    }
+  },
+
+  getActivities: async (limit = 10) => {
+    try {
+      const response = await profileApi.get(`/activities/?limit=${limit}`);
+      return response.data;
+    } catch (error) {
+      throw error.response?.data || { error: 'Failed to get activities' };
+    }
+  },
 };
 
 export default api;

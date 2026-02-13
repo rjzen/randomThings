@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import UserProfile, Theme
+from .models import UserProfile, Theme, Activity
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -12,9 +12,17 @@ class ThemeSerializer(serializers.ModelSerializer):
         model = Theme
         fields = '__all__'
 
+class ActivitySerializer(serializers.ModelSerializer):
+    user_username = serializers.CharField(source='user.username', read_only=True)
+    
+    class Meta:
+        model = Activity
+        fields = ['id', 'user', 'user_username', 'action', 'description', 'metadata', 'created_at']
+
 class UserProfileSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)
     user_info = UserSerializer(source='user', write_only=True, required=False)
+    current_theme = ThemeSerializer(read_only=True)
     
     class Meta:
         model = UserProfile
