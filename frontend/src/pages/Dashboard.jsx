@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { themeAPI, galleryAPI } from '../utils/api';
+import { themeAPI, galleryAPI, notesAPI } from '../utils/api';
 import { useTheme } from '../context/ThemeContext';
 
 const Dashboard = () => {
   const [activities, setActivities] = useState([]);
   const [galleryCount, setGalleryCount] = useState(0);
+  const [notesCount, setNotesCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const { refreshThemes } = useTheme();
 
   useEffect(() => {
     loadActivities();
     loadGalleryCount();
+    loadNotesCount();
 
     const handleFocus = () => {
       loadActivities();
       loadGalleryCount();
+      loadNotesCount();
     };
 
     window.addEventListener('focus', handleFocus);
@@ -38,6 +41,15 @@ const Dashboard = () => {
       setGalleryCount(photos.length);
     } catch (error) {
       console.error('Failed to load gallery count:', error);
+    }
+  };
+
+  const loadNotesCount = async () => {
+    try {
+      const notes = await notesAPI.getNotes();
+      setNotesCount(notes.length);
+    } catch (error) {
+      console.error('Failed to load notes count:', error);
     }
   };
 
@@ -74,6 +86,8 @@ const Dashboard = () => {
       case 'photo_deleted':
       case 'task_created':
       case 'task_deleted':
+      case 'note_created':
+      case 'note_deleted':
         return (
           <div className="flex-shrink-0 bg-pink-100 rounded-lg p-2">
             <svg className="h-5 w-5 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -114,6 +128,10 @@ const Dashboard = () => {
         return 'Task Created';
       case 'task_deleted':
         return 'Task Deleted';
+      case 'note_created':
+        return 'Note Created';
+      case 'note_deleted':
+        return 'Note Deleted';
       default:
         return action;
     }
@@ -179,7 +197,7 @@ const Dashboard = () => {
             </div>
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-600">Notes</p>
-              <p className="text-2xl font-semibold text-gray-900">0</p>
+              <p className="text-2xl font-semibold text-gray-900">{notesCount}</p>
             </div>
           </div>
         </div>
