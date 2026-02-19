@@ -121,6 +121,21 @@ const Navbar = ({ onMenuClick }) => {
     }
   };
 
+  const handleLogout = async () => {
+    try {
+      const refreshToken = localStorage.getItem('refresh_token');
+      if (refreshToken) {
+        await authAPI.logout();
+      }
+    } catch (error) {
+      console.log('Logout API error (ignoring):', error.message);
+    } finally {
+      localStorage.removeItem('access_token');
+      localStorage.removeItem('refresh_token');
+      navigate('/login', { replace: true });
+    }
+  };
+
   const totalUnread = todayTasks.filter(t => !t.completed).length + upcomingTasks.filter(t => !t.completed).length;
 
   return (
