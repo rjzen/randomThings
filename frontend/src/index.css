@@ -1,3 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --theme-primary: #6366f1;
+    --theme-secondary: #8b5cf6;
+    --theme-background: #f9fafb;
+    --theme-text: #111827;
+    --theme-sidebar: #1f2937;
+  }
+  
+  .theme-root {
+    --color-primary: var(--theme-primary);
+    --color-secondary: var(--theme-secondary);
+    --color-background: var(--theme-background);
+    --color-text: var(--theme-text);
+  }
+  
+  /* Apply theme colors to common elements */
+  .theme-root .bg-primary {
+    background-color: var(--theme-primary);
+  }
+  
+  .theme-root .text-primary {
+    color: var(--theme-primary);
+  }
+  
+  .theme-root .border-primary {
+    border-color: var(--theme-primary);
+  }
+  
+  .theme-root .hover\:bg-primary:hover {
+    background-color: var(--theme-primary);
+  }
+  
+  .theme-root .focus\:ring-primary:focus {
+    --tw-ring-color: var(--theme-primary);
+  }
+  
+  /* Theme button styles */
+  .theme-btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors;
+    background-color: var(--theme-primary);
+    color: white;
+  }
+  
+  .theme-btn:hover {
+    opacity: 0.9;
+  }
+  
+  .theme-btn-secondary {
+    @apply px-4 py-2 rounded-md font-medium transition-colors border;
+    border-color: var(--theme-primary);
+    color: var(--theme-primary);
+    background-color: transparent;
+  }
+  
+  .theme-btn-secondary:hover {
+    background-color: var(--theme-primary);
+    color: white;
+  }
+}

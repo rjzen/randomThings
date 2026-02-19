@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
+import { useTheme } from '../context/ThemeContext';
 
 const Layout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const { currentTheme } = useTheme();
 
   // Close sidebar when clicking outside on mobile
   useEffect(() => {
@@ -31,7 +33,7 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen" style={{ backgroundColor: currentTheme.background_color, color: currentTheme.text_color }}>
       {/* Mobile Sidebar Overlay */}
       {sidebarOpen && (
         <div 

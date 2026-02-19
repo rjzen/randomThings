@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
 import {
   HomeIcon,
   Squares2X2Icon,
@@ -9,7 +10,7 @@ import {
   CalendarIcon,
   XMarkIcon,
   ChevronLeftIcon,
-  ChevronRightIcon
+  ChevronRightIcon,
 } from '@heroicons/react/24/outline';
 
 const sidebarItems = [
@@ -60,6 +61,7 @@ const sidebarItems = [
 const Sidebar = ({ isOpen, onClose, isCollapsed, onToggleCollapse }) => {
   const location = useLocation();
   const navigate = useNavigate();
+  const { currentTheme } = useTheme();
 
   const handleNavigation = (href) => {
     navigate(href);
@@ -81,7 +83,7 @@ const Sidebar = ({ isOpen, onClose, isCollapsed, onToggleCollapse }) => {
       {/* Sidebar */}
       <div className={`
         fixed lg:fixed lg:top-4 lg:left-4 z-40 flex flex-col
-        bg-gray-800 text-white
+        text-white
         transition-all duration-300 ease-in-out
         ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         ${isCollapsed ? 'lg:w-16' : 'lg:w-64'}
@@ -89,7 +91,8 @@ const Sidebar = ({ isOpen, onClose, isCollapsed, onToggleCollapse }) => {
         lg:h-[calc(100vh-2rem)]
         rounded-lg shadow-2xl
         lg:rounded-lg lg:shadow-2xl
-      `}>
+      `}
+      style={{ backgroundColor: currentTheme.sidebar_color }}>
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-700">
           {!isCollapsed && (
@@ -131,11 +134,12 @@ const Sidebar = ({ isOpen, onClose, isCollapsed, onToggleCollapse }) => {
                 className={`
                   w-full flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors
                   ${isActive
-                    ? 'bg-indigo-600 text-white'
+                    ? 'text-white'
                     : 'text-gray-300 hover:bg-gray-700 hover:text-white'
                   }
                   ${isCollapsed ? 'justify-center' : ''}
                 `}
+                style={isActive ? { backgroundColor: currentTheme.primary_color } : {}}
               >
                 <Icon className="h-6 w-6 flex-shrink-0" />
                 {!isCollapsed && (

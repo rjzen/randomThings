@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { authAPI } from '../utils/api';
 import { useNavigate } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ const Login = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const { currentTheme } = useTheme();
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -36,7 +38,10 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center px-4">
+    <div 
+      className="min-h-screen flex items-center justify-center px-4"
+      style={{ background: `linear-gradient(to bottom right, ${currentTheme.primary_color}, ${currentTheme.secondary_color})` }}
+    >
       <div className="max-w-md w-full bg-white rounded-lg shadow-xl p-8">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Hobby Hub</h1>
@@ -61,7 +66,8 @@ const Login = () => {
               required
               value={formData.username}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 transition-colors"
+              style={{ '--tw-ring-color': currentTheme.primary_color, borderColor: currentTheme.primary_color }}
               placeholder="Enter your username"
             />
           </div>
@@ -77,7 +83,8 @@ const Login = () => {
               required
               value={formData.password}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 transition-colors"
+              style={{ '--tw-ring-color': currentTheme.primary_color, borderColor: currentTheme.primary_color }}
               placeholder="Enter your password"
             />
           </div>
@@ -89,7 +96,8 @@ const Login = () => {
               type="checkbox"
               checked={formData.remember}
               onChange={handleChange}
-              className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+              className="h-4 w-4 rounded border-gray-300"
+              style={{ color: currentTheme.primary_color }}
             />
             <label htmlFor="remember" className="ml-2 block text-sm text-gray-900">
               Remember me
@@ -100,7 +108,8 @@ const Login = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              style={{ backgroundColor: currentTheme.primary_color }}
             >
               {loading ? 'Logging in...' : 'Login'}
             </button>

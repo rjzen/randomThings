@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { authAPI } from '../utils/api';
+import { useTheme } from '../context/ThemeContext';
 
 const Profile = () => {
   const [profileData, setProfileData] = useState(null);
@@ -8,6 +9,7 @@ const Profile = () => {
   const [editMode, setEditMode] = useState(false);
   const [avatarFile, setAvatarFile] = useState(null);
   const [avatarPreview, setAvatarPreview] = useState(null);
+  const { refreshThemes } = useTheme();
 
   useEffect(() => {
     fetchProfile();
@@ -75,6 +77,19 @@ const Profile = () => {
         }
       });
 
+      // Add user info fields (first_name, last_name, email)
+      if (profileData.user_info) {
+        if (profileData.user_info.first_name !== undefined && profileData.user_info.first_name !== null) {
+          formData.append('first_name', profileData.user_info.first_name);
+        }
+        if (profileData.user_info.last_name !== undefined && profileData.user_info.last_name !== null) {
+          formData.append('last_name', profileData.user_info.last_name);
+        }
+        if (profileData.user_info.email !== undefined && profileData.user_info.email !== null) {
+          formData.append('email', profileData.user_info.email);
+        }
+      }
+
       // Add avatar if changed
       if (avatarFile) {
         formData.append('avatar', avatarFile);
@@ -87,9 +102,22 @@ const Profile = () => {
       }
 
       const updatedData = await authAPI.updateProfile(formData);
-      setProfileData(updatedData);
+      
+      // Update local state with new user info from the response
+      const userInfoFromResponse = {
+        username: updatedData.user?.username || '',
+        email: updatedData.user?.email || '',
+        first_name: updatedData.user?.first_name || '',
+        last_name: updatedData.user?.last_name || ''
+      };
+      
+      setProfileData({
+        ...updatedData,
+        user_info: userInfoFromResponse
+      });
       setEditMode(false);
       setAvatarFile(null);
+      refreshThemes();
       
       // Show success message
       alert('Profile updated successfully!');
