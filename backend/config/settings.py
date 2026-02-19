@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'api',
     'auth_api',
     'profiles',
+    'gallery',
+    'calendar_app',
     'rest_framework_simplejwt.token_blacklist',
 ]
 

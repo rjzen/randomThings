@@ -49,6 +49,11 @@ class Activity(models.Model):
         ('profile_updated', 'Profile Updated'),
         ('profile_created', 'Profile Created'),
         ('avatar_updated', 'Avatar Updated'),
+        ('photo_uploaded', 'Photo Uploaded'),
+        ('photo_updated', 'Photo Updated'),
+        ('photo_deleted', 'Photo Deleted'),
+        ('task_created', 'Task Created'),
+        ('task_deleted', 'Task Deleted'),
     ]
     
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='activities')

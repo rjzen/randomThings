@@ -25,6 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('auth_api.urls')),
     path('api/profile/', include('profiles.urls')),
+    path('api/gallery/', include('gallery.urls')),
+    path('api/calendar/', include('calendar_app.urls')),
 ]
 
 # Serve media files in development

@@ -1,14 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { themeAPI } from '../utils/api';
+import { themeAPI, galleryAPI } from '../utils/api';
 import { useTheme } from '../context/ThemeContext';
 
 const Dashboard = () => {
   const [activities, setActivities] = useState([]);
+  const [galleryCount, setGalleryCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const { refreshThemes } = useTheme();
 
   useEffect(() => {
     loadActivities();
+    loadGalleryCount();
+
+    const handleFocus = () => {
+      loadActivities();
+      loadGalleryCount();
+    };
+
+    window.addEventListener('focus', handleFocus);
+    return () => window.removeEventListener('focus', handleFocus);
   }, []);
 
   const loadActivities = async () => {
@@ -19,6 +29,15 @@ const Dashboard = () => {
       console.error('Failed to load activities:', error);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const loadGalleryCount = async () => {
+    try {
+      const photos = await galleryAPI.getPhotos();
+      setGalleryCount(photos.length);
+    } catch (error) {
+      console.error('Failed to load gallery count:', error);
     }
   };
 
@@ -50,6 +69,11 @@ const Dashboard = () => {
           </div>
         );
       case 'avatar_updated':
+      case 'photo_uploaded':
+      case 'photo_updated':
+      case 'photo_deleted':
+      case 'task_created':
+      case 'task_deleted':
         return (
           <div className="flex-shrink-0 bg-pink-100 rounded-lg p-2">
             <svg className="h-5 w-5 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -80,6 +104,16 @@ const Dashboard = () => {
         return 'Profile Created';
       case 'avatar_updated':
         return 'Avatar Updated';
+      case 'photo_uploaded':
+        return 'Photo Uploaded';
+      case 'photo_updated':
+        return 'Photo Updated';
+      case 'photo_deleted':
+        return 'Photo Deleted';
+      case 'task_created':
+        return 'Task Created';
+      case 'task_deleted':
+        return 'Task Deleted';
       default:
         return action;
     }
@@ -131,7 +165,7 @@ const Dashboard = () => {
             </div>
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-600">Gallery Items</p>
-              <p className="text-2xl font-semibold text-gray-900">0</p>
+              <p className="text-2xl font-semibold text-gray-900">{galleryCount}</p>
             </div>
           </div>
         </div>
