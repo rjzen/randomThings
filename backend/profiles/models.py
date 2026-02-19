@@ -54,6 +54,8 @@ class Activity(models.Model):
         ('photo_deleted', 'Photo Deleted'),
         ('task_created', 'Task Created'),
         ('task_deleted', 'Task Deleted'),
+        ('note_created', 'Note Created'),
+        ('note_deleted', 'Note Deleted'),
     ]
     
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='activities')

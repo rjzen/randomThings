@@ -4,6 +4,7 @@ const API_BASE_URL = 'http://localhost:8000/api/auth';
 const PROFILE_BASE_URL = 'http://localhost:8000/api/profile';
 const GALLERY_BASE_URL = 'http://localhost:8000/api/gallery';
 const CALENDAR_BASE_URL = 'http://localhost:8000/api/calendar';
+const NOTES_BASE_URL = 'http://localhost:8000/api/notes';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -418,6 +419,94 @@ export const calendarAPI = {
     } catch (error) {
       throw error.response?.data || { error: 'Failed to toggle task complete' };
     }
+  },
+};
+
+const notesApi = axios.create({
+  baseURL: NOTES_BASE_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+notesApi.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem('access_token');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+notesApi.interceptors.response.use(
+  (response) => response,
+  async (error) => {
+    const originalRequest = error.config;
+    if (error.response?.status === 401 && !originalRequest._retry) {
+      originalRequest._retry = true;
+      try {
+        const refreshToken = localStorage.getItem('refresh_token');
+        if (refreshToken) {
+          const response = await axios.post(`${API_BASE_URL}/refresh/`, { refresh: refreshToken });
+          localStorage.setItem('access_token', response.data.access);
+          originalRequest.headers.Authorization = `Bearer ${response.data.access}`;
+          return notesApi(originalRequest);
+        }
+      } catch {
+        localStorage.removeItem('access_token');
+        localStorage.removeItem('refresh_token');
+        window.location.href = '/login';
+      }
+    }
+    return Promise.reject(error);
+  }
+);
+
+const notesApiMultipart = axios.create({
+  baseURL: NOTES_BASE_URL,
+  headers: { 'Content-Type': 'multipart/form-data' },
+});
+
+notesApiMultipart.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem('access_token');
+    if (token) config.headers.Authorization = `Bearer ${token}`;
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+export const notesAPI = {
+  getFolders: async () => (await notesApi.get('/folders/')).data,
+  createFolder: async (name) => (await notesApi.post('/folders/', { name })).data,
+  deleteFolder: async (id) => { await notesApi.delete(`/folders/${id}/`); return true; },
+
+  getTags: async () => (await notesApi.get('/tags/')).data,
+  createTag: async (data) => (await notesApi.post('/tags/', data)).data,
+  deleteTag: async (id) => { await notesApi.delete(`/tags/${id}/`); return true; },
+
+  getNotes: async (params = {}) => {
+    const query = new URLSearchParams(params).toString();
+    return (await notesApi.get(`/notes/${query ? '?' + query : ''}`)).data;
+  },
+  getNote: async (id) => (await notesApi.get(`/notes/${id}/`)).data,
+  createNote: async (data) => (await notesApi.post('/notes/', data)).data,
+  updateNote: async (id, data) => (await notesApi.patch(`/notes/${id}/`, data)).data,
+  deleteNote: async (id) => { await notesApi.delete(`/notes/${id}/`); return true; },
+  pinNote: async (id) => (await notesApi.patch(`/notes/${id}/pin/`)).data,
+  archiveNote: async (id) => (await notesApi.patch(`/notes/${id}/archive/`)).data,
+  trashNote: async (id) => (await notesApi.patch(`/notes/${id}/trash/`)).data,
+  restoreNote: async (id) => (await notesApi.patch(`/notes/${id}/restore/`)).data,
+
+  uploadImage: async (noteId, formData) => {
+    const response = await notesApiMultipart.post(`/notes/${noteId}/images/`, formData);
+    return response.data;
+  },
+  deleteImage: async (imageId) => {
+    await notesApi.delete(`/notes/images/${imageId}/`);
+    return true;
   },
 };
 
