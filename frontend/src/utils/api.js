@@ -5,6 +5,7 @@ const PROFILE_BASE_URL = 'http://localhost:8000/api/profile';
 const GALLERY_BASE_URL = 'http://localhost:8000/api/gallery';
 const CALENDAR_BASE_URL = 'http://localhost:8000/api/calendar';
 const NOTES_BASE_URL = 'http://localhost:8000/api/notes';
+const PROJECTS_BASE_URL = 'http://localhost:8000/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -508,6 +509,47 @@ export const notesAPI = {
     await notesApi.delete(`/notes/images/${imageId}/`);
     return true;
   },
+};
+
+const projectsApi = axios.create({
+  baseURL: PROJECTS_BASE_URL,
+  headers: { 'Content-Type': 'application/json' },
+});
+
+projectsApi.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem('access_token');
+    if (token) config.headers.Authorization = `Bearer ${token}`;
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+export const projectsAPI = {
+  getCollections: async (params = {}) => {
+    const query = new URLSearchParams(params).toString();
+    return (await projectsApi.get(`/projects/collections/${query ? '?' + query : ''}`)).data;
+  },
+  getCollection: async (id) => (await projectsApi.get(`/projects/collections/${id}/`)).data,
+  createCollection: async (data) => (await projectsApi.post('/projects/collections/', data)).data,
+  updateCollection: async (id, data) => (await projectsApi.patch(`/projects/collections/${id}/`, data)).data,
+  deleteCollection: async (id) => { await projectsApi.delete(`/projects/collections/${id}/`); return true; },
+  getCollectionProjects: async (id) => (await projectsApi.get(`/projects/collections/${id}/projects/`)).data,
+
+  getTags: async () => (await projectsApi.get('/projects/tags/')).data,
+  createTag: async (data) => (await projectsApi.post('/projects/tags/', data)).data,
+  deleteTag: async (id) => { await projectsApi.delete(`/projects/tags/${id}/`); return true; },
+
+  getProjects: async (params = {}) => {
+    const query = new URLSearchParams(params).toString();
+    return (await projectsApi.get(`/projects/projects/${query ? '?' + query : ''}`)).data;
+  },
+  getProject: async (id) => (await projectsApi.get(`/projects/projects/${id}/`)).data,
+  createProject: async (data) => (await projectsApi.post('/projects/projects/', data)).data,
+  updateProject: async (id, data) => (await projectsApi.patch(`/projects/projects/${id}/`, data)).data,
+  deleteProject: async (id) => { await projectsApi.delete(`/projects/projects/${id}/`); return true; },
+  pinProject: async (id) => (await projectsApi.patch(`/projects/projects/${id}/pin/`)).data,
+  updateProgress: async (id, progress) => (await projectsApi.patch(`/projects/projects/${id}/progress/`, { progress })).data,
 };
 
 export default api;

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { themeAPI, galleryAPI, notesAPI } from '../utils/api';
+import { themeAPI, galleryAPI, notesAPI, projectsAPI } from '../utils/api';
 import { useTheme } from '../context/ThemeContext';
 
 const Dashboard = () => {
   const [activities, setActivities] = useState([]);
   const [galleryCount, setGalleryCount] = useState(0);
   const [notesCount, setNotesCount] = useState(0);
+  const [projectsCount, setProjectsCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const { refreshThemes } = useTheme();
 
@@ -13,11 +14,13 @@ const Dashboard = () => {
     loadActivities();
     loadGalleryCount();
     loadNotesCount();
+    loadProjectsCount();
 
     const handleFocus = () => {
       loadActivities();
       loadGalleryCount();
       loadNotesCount();
+      loadProjectsCount();
     };
 
     window.addEventListener('focus', handleFocus);
@@ -50,6 +53,15 @@ const Dashboard = () => {
       setNotesCount(notes.length);
     } catch (error) {
       console.error('Failed to load notes count:', error);
+    }
+  };
+
+  const loadProjectsCount = async () => {
+    try {
+      const projects = await projectsAPI.getProjects();
+      setProjectsCount(projects.length);
+    } catch (error) {
+      console.error('Failed to load projects count:', error);
     }
   };
 
@@ -88,6 +100,9 @@ const Dashboard = () => {
       case 'task_deleted':
       case 'note_created':
       case 'note_deleted':
+      case 'project_created':
+      case 'project_deleted':
+      case 'collection_deleted':
         return (
           <div className="flex-shrink-0 bg-pink-100 rounded-lg p-2">
             <svg className="h-5 w-5 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -132,6 +147,12 @@ const Dashboard = () => {
         return 'Note Created';
       case 'note_deleted':
         return 'Note Deleted';
+      case 'project_created':
+        return 'Project Created';
+      case 'project_deleted':
+        return 'Project Deleted';
+      case 'collection_deleted':
+        return 'Collection Deleted';
       default:
         return action;
     }
@@ -169,7 +190,7 @@ const Dashboard = () => {
             </div>
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-600">Total Projects</p>
-              <p className="text-2xl font-semibold text-gray-900">0</p>
+              <p className="text-2xl font-semibold text-gray-900">{projectsCount}</p>
             </div>
           </div>
         </div>

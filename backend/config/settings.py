@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'gallery',
     'calendar_app',
     'notes_app',
+    'projects_app',
     'rest_framework_simplejwt.token_blacklist',
 ]
 
