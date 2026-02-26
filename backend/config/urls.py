@@ -29,6 +29,7 @@ urlpatterns = [
     path('api/calendar/', include('calendar_app.urls')),
     path('api/notes/', include('notes_app.urls')),
     path('api/projects/', include('projects_app.urls')),
+    path('api/habits/', include('habits.urls')),
 ]
 
 # Serve media files in development

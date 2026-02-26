@@ -1,0 +1,2148 @@
+[
+  {
+    "model": "gallery.photo",
+    "pk": 9,
+    "fields": {
+      "id": 9,
+      "user": 1,
+      "image": "gallery/download_12.jpg",
+      "title": "download (12)",
+      "description": "",
+      "created_at": "2026-02-19T01:28:08.243553+00:00",
+      "updated_at": "2026-02-19T01:28:08.243619+00:00"
+    }
+  },
+  {
+    "model": "gallery.photo",
+    "pk": 7,
+    "fields": {
+      "id": 7,
+      "user": 1,
+      "image": "gallery/pou.jpg",
+      "title": "pou",
+      "description": "",
+      "created_at": "2026-02-19T01:21:12.661711+00:00",
+      "updated_at": "2026-02-19T01:21:12.661847+00:00"
+    }
+  },
+  {
+    "model": "gallery.photo",
+    "pk": 6,
+    "fields": {
+      "id": 6,
+      "user": 1,
+      "image": "gallery/.jpg",
+      "title": "😎😎",
+      "description": "",
+      "created_at": "2026-02-19T01:21:02.658282+00:00",
+      "updated_at": "2026-02-19T01:21:02.658349+00:00"
+    }
+  },
+  {
+    "model": "gallery.photo",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "user": 1,
+      "image": "gallery/𝙎𝙖𝙢𝙚𝙩_TikTokta.jpg",
+      "title": "𝙎𝙖𝙢𝙚𝙩 TikTok'ta",
+      "description": "",
+      "created_at": "2026-02-19T01:20:55.641883+00:00",
+      "updated_at": "2026-02-19T01:20:55.641958+00:00"
+    }
+  },
+  {
+    "model": "gallery.photo",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "user": 1,
+      "image": "gallery/_3.jpg",
+      "title": "_3",
+      "description": "",
+      "created_at": "2026-02-19T01:20:50.664713+00:00",
+      "updated_at": "2026-02-19T01:20:50.664823+00:00"
+    }
+  },
+  {
+    "model": "gallery.photo",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "user": 1,
+      "image": "gallery/_Let_Me_Know__ahh_Dog.jpg",
+      "title": "_Let Me Know_ ahh Dog",
+      "description": "",
+      "created_at": "2026-02-19T01:20:34.905773+00:00",
+      "updated_at": "2026-02-19T01:20:34.905826+00:00"
+    }
+  },
+  {
+    "model": "gallery.photo",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "user": 1,
+      "image": "gallery/download_10.jpg",
+      "title": "download (10)",
+      "description": "",
+      "created_at": "2026-02-19T01:20:30.565839+00:00",
+      "updated_at": "2026-02-19T01:20:30.565980+00:00"
+    }
+  },
+  {
+    "model": "gallery.photo",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "user": 1,
+      "image": "gallery/download_11.jpg",
+      "title": "download (11)",
+      "description": "",
+      "created_at": "2026-02-19T01:20:22.075007+00:00",
+      "updated_at": "2026-02-19T01:20:22.075089+00:00"
+    }
+  },
+  {
+    "model": "notes_app.note",
+    "pk": 12,
+    "fields": {
+      "id": 12,
+      "user": 1,
+      "title": "34",
+      "content": "safd",
+      "folder": 2,
+      "color": "#dcfce7",
+      "is_pinned": false,
+      "is_archived": false,
+      "is_deleted": true,
+      "deleted_at": "2026-02-19T07:20:20.042039+00:00",
+      "created_at": "2026-02-19T07:20:14.502296+00:00",
+      "updated_at": "2026-02-19T07:20:20.042161+00:00"
+    }
+  },
+  {
+    "model": "notes_app.note",
+    "pk": 11,
+    "fields": {
+      "id": 11,
+      "user": 1,
+      "title": "dsfgdfg",
+      "content": "fgdfgd",
+      "folder": 2,
+      "color": "#fee2e2",
+      "is_pinned": false,
+      "is_archived": false,
+      "is_deleted": false,
+      "deleted_at": null,
+      "created_at": "2026-02-19T07:20:02.821506+00:00",
+      "updated_at": "2026-02-19T07:20:02.821553+00:00"
+    }
+  },
+  {
+    "model": "notes_app.note",
+    "pk": 10,
+    "fields": {
+      "id": 10,
+      "user": 1,
+      "title": "fasdfasdfa",
+      "content": "fasdfasd",
+      "folder": 2,
+      "color": "#fee2e2",
+      "is_pinned": false,
+      "is_archived": false,
+      "is_deleted": true,
+      "deleted_at": "2026-02-19T07:17:05.574023+00:00",
+      "created_at": "2026-02-19T07:14:58.447908+00:00",
+      "updated_at": "2026-02-19T07:17:05.574167+00:00"
+    }
+  },
+  {
+    "model": "notes_app.note",
+    "pk": 9,
+    "fields": {
+      "id": 9,
+      "user": 1,
+      "title": "dfasdfasdfdsf3",
+      "content": "asdfasdfasdf21312",
+      "folder": null,
+      "color": "#dcfce7",
+      "is_pinned": false,
+      "is_archived": false,
+      "is_deleted": true,
+      "deleted_at": "2026-02-19T07:17:03.914176+00:00",
+      "created_at": "2026-02-19T07:12:19.513865+00:00",
+      "updated_at": "2026-02-19T07:17:03.914335+00:00"
+    }
+  },
+  {
+    "model": "notes_app.note",
+    "pk": 8,
+    "fields": {
+      "id": 8,
+      "user": 1,
+      "title": "dfadsfas",
+      "content": "dfasdfasdf",
+      "folder": null,
+      "color": "#e0e7ff",
+      "is_pinned": false,
+      "is_archived": false,
+      "is_deleted": true,
+      "deleted_at": "2026-02-19T07:10:50.940961+00:00",
+      "created_at": "2026-02-19T07:09:44.472290+00:00",
+      "updated_at": "2026-02-19T07:10:50.941371+00:00"
+    }
+  },
+  {
+    "model": "notes_app.note",
+    "pk": 7,
+    "fields": {
+      "id": 7,
+      "user": 1,
+      "title": "New SOmething",
+      "content": "New SOmething",
+      "folder": null,
+      "color": "#e0e7ff",
+      "is_pinned": false,
+      "is_archived": false,
+      "is_deleted": true,
+      "deleted_at": "2026-02-19T07:05:13.551376+00:00",
+      "created_at": "2026-02-19T06:56:12.712905+00:00",
+      "updated_at": "2026-02-19T07:05:13.551503+00:00"
+    }
+  },
+  {
+    "model": "notes_app.note",
+    "pk": 6,
+    "fields": {
+      "id": 6,
+      "user": 1,
+      "title": "something",
+      "content": "something, something, something,",
+      "folder": null,
+      "color": "#dcfce7",
+      "is_pinned": false,
+      "is_archived": false,
+      "is_deleted": true,
+      "deleted_at": "2026-02-19T06:49:28.992949+00:00",
+      "created_at": "2026-02-19T06:40:22.106492+00:00",
+      "updated_at": "2026-02-19T06:49:28.993651+00:00"
+    }
+  },
+  {
+    "model": "notes_app.note",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "user": 1,
+      "title": "New note",
+      "content": "something, something, something, something",
+      "folder": null,
+      "color": "#e0e7ff",
+      "is_pinned": false,
+      "is_archived": false,
+      "is_deleted": true,
+      "deleted_at": "2026-02-19T06:21:23.148464+00:00",
+      "created_at": "2026-02-19T06:18:43.873564+00:00",
+      "updated_at": "2026-02-19T06:21:23.148640+00:00"
+    }
+  },
+  {
+    "model": "notes_app.note",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "user": 1,
+      "title": "",
+      "content": "",
+      "folder": null,
+      "color": "#ffffff",
+      "is_pinned": false,
+      "is_archived": false,
+      "is_deleted": true,
+      "deleted_at": "2026-02-19T06:10:42.257795+00:00",
+      "created_at": "2026-02-19T06:09:58.718164+00:00",
+      "updated_at": "2026-02-19T06:10:42.257906+00:00"
+    }
+  },
+  {
+    "model": "notes_app.note",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "user": 1,
+      "title": "",
+      "content": "",
+      "folder": null,
+      "color": "#ffffff",
+      "is_pinned": false,
+      "is_archived": false,
+      "is_deleted": true,
+      "deleted_at": "2026-02-19T06:09:57.698989+00:00",
+      "created_at": "2026-02-19T06:09:18.439569+00:00",
+      "updated_at": "2026-02-19T06:09:57.699114+00:00"
+    }
+  },
+  {
+    "model": "notes_app.note",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "user": 1,
+      "title": "",
+      "content": "",
+      "folder": null,
+      "color": "#ffffff",
+      "is_pinned": false,
+      "is_archived": false,
+      "is_deleted": true,
+      "deleted_at": "2026-02-19T06:09:55.725853+00:00",
+      "created_at": "2026-02-19T06:09:08.185126+00:00",
+      "updated_at": "2026-02-19T06:09:55.725995+00:00"
+    }
+  },
+  {
+    "model": "notes_app.note",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "user": 1,
+      "title": "",
+      "content": "",
+      "folder": null,
+      "color": "#ffffff",
+      "is_pinned": false,
+      "is_archived": false,
+      "is_deleted": true,
+      "deleted_at": "2026-02-19T06:09:03.910770+00:00",
+      "created_at": "2026-02-19T06:08:51.273996+00:00",
+      "updated_at": "2026-02-19T06:09:03.910887+00:00"
+    }
+  },
+  {
+    "model": "notes_app.folder",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "user": 1,
+      "name": "Somethings",
+      "created_at": "2026-02-19T07:12:40.828132+00:00"
+    }
+  },
+  {
+    "model": "notes_app.tag",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "user": 1,
+      "name": "Yeahh",
+      "color": "#8b5cf6"
+    }
+  },
+  {
+    "model": "profiles.userprofile",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "user": 1,
+      "avatar": "avatars/590267966_1448721760596112_3704370680666791190_n.jpg",
+      "phone": "09603306689",
+      "address": "Zone 9E Hilltop, Macanhan, Carmen, CDO",
+      "city": "Cagayan de Oro City",
+      "state": "Misamis Oriental",
+      "postcode": "9000",
+      "date_of_birth": "2003-10-30",
+      "national_id": "9000",
+      "title": "Junior Full Stack Developer",
+      "hire_date": "2026-01-19",
+      "theme": null,
+      "current_theme": 1,
+      "about": "Something, something.",
+      "created_at": "2026-02-12T05:38:43.092365+00:00",
+      "updated_at": "2026-02-13T01:57:24.763185+00:00"
+    }
+  },
+  {
+    "model": "profiles.theme",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "name": "Default",
+      "primary_color": "#6366f1",
+      "secondary_color": "#8b5cf6",
+      "background_color": "#f9fafb",
+      "text_color": "#111827",
+      "sidebar_color": "#1f2937",
+      "is_default": true,
+      "created_at": "2026-02-12T03:48:39.656081+00:00"
+    }
+  },
+  {
+    "model": "profiles.theme",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "name": "New theme",
+      "primary_color": "#00d5ff",
+      "secondary_color": "#69f75f",
+      "background_color": "#f9f9fb",
+      "text_color": "#7b3232",
+      "sidebar_color": "#1f2937",
+      "is_default": false,
+      "created_at": "2026-02-12T08:47:53.903852+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 37,
+    "fields": {
+      "id": 37,
+      "user": 1,
+      "action": "project_created",
+      "description": "Created project: gkjhgkh",
+      "metadata": {
+        "project_id": 1
+      },
+      "created_at": "2026-02-20T02:13:57.674548+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 36,
+    "fields": {
+      "id": 36,
+      "user": 1,
+      "action": "note_deleted",
+      "description": "Deleted note: 34",
+      "metadata": {
+        "note_id": 12
+      },
+      "created_at": "2026-02-19T07:20:20.049207+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 35,
+    "fields": {
+      "id": 35,
+      "user": 1,
+      "action": "note_created",
+      "description": "Created note: 34",
+      "metadata": {
+        "note_id": 12
+      },
+      "created_at": "2026-02-19T07:20:14.519124+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 34,
+    "fields": {
+      "id": 34,
+      "user": 1,
+      "action": "note_created",
+      "description": "Created note: dsfgdfg",
+      "metadata": {
+        "note_id": 11
+      },
+      "created_at": "2026-02-19T07:20:02.839478+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 33,
+    "fields": {
+      "id": 33,
+      "user": 1,
+      "action": "note_created",
+      "description": "Created note: fasdfasdfa",
+      "metadata": {
+        "note_id": 10
+      },
+      "created_at": "2026-02-19T07:14:58.464795+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 32,
+    "fields": {
+      "id": 32,
+      "user": 1,
+      "action": "note_created",
+      "description": "Created note: dfasdfasdfdsf",
+      "metadata": {
+        "note_id": 9
+      },
+      "created_at": "2026-02-19T07:12:19.524578+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 31,
+    "fields": {
+      "id": 31,
+      "user": 1,
+      "action": "note_created",
+      "description": "Created note: dfadsfas",
+      "metadata": {
+        "note_id": 8
+      },
+      "created_at": "2026-02-19T07:09:44.483316+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 30,
+    "fields": {
+      "id": 30,
+      "user": 1,
+      "action": "note_created",
+      "description": "Created note: New SOmething",
+      "metadata": {
+        "note_id": 7
+      },
+      "created_at": "2026-02-19T06:56:12.723998+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 29,
+    "fields": {
+      "id": 29,
+      "user": 1,
+      "action": "note_created",
+      "description": "Created note: something",
+      "metadata": {
+        "note_id": 6
+      },
+      "created_at": "2026-02-19T06:40:22.116024+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 28,
+    "fields": {
+      "id": 28,
+      "user": 1,
+      "action": "note_created",
+      "description": "Created note: New note",
+      "metadata": {
+        "note_id": 5
+      },
+      "created_at": "2026-02-19T06:18:43.883488+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 27,
+    "fields": {
+      "id": 27,
+      "user": 1,
+      "action": "note_created",
+      "description": "Created note: Untitled",
+      "metadata": {
+        "note_id": 4
+      },
+      "created_at": "2026-02-19T06:09:58.729729+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 26,
+    "fields": {
+      "id": 26,
+      "user": 1,
+      "action": "note_created",
+      "description": "Created note: Untitled",
+      "metadata": {
+        "note_id": 3
+      },
+      "created_at": "2026-02-19T06:09:18.449129+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 25,
+    "fields": {
+      "id": 25,
+      "user": 1,
+      "action": "note_created",
+      "description": "Created note: Untitled",
+      "metadata": {
+        "note_id": 2
+      },
+      "created_at": "2026-02-19T06:09:08.193895+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 24,
+    "fields": {
+      "id": 24,
+      "user": 1,
+      "action": "note_created",
+      "description": "Created note: Untitled",
+      "metadata": {
+        "note_id": 1
+      },
+      "created_at": "2026-02-19T06:08:51.284148+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 23,
+    "fields": {
+      "id": 23,
+      "user": 1,
+      "action": "task_created",
+      "description": "Created task: Future tasks pending",
+      "metadata": {
+        "task_id": 6,
+        "date": "2026-02-20"
+      },
+      "created_at": "2026-02-19T04:52:06.157242+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 22,
+    "fields": {
+      "id": 22,
+      "user": 1,
+      "action": "task_deleted",
+      "description": "Deleted task: Testing New Features",
+      "metadata": {
+        "task_id": 2
+      },
+      "created_at": "2026-02-19T02:20:57.056120+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 21,
+    "fields": {
+      "id": 21,
+      "user": 1,
+      "action": "photo_deleted",
+      "description": "Deleted photo: 514641729_599567952817541_3779243875345308357_n",
+      "metadata": {
+        "photo_id": 8
+      },
+      "created_at": "2026-02-19T01:32:16.538573+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 20,
+    "fields": {
+      "id": 20,
+      "user": 1,
+      "action": "profile_updated",
+      "description": "User updated their profile information",
+      "metadata": {
+        "username": "admin"
+      },
+      "created_at": "2026-02-13T01:57:24.778716+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 19,
+    "fields": {
+      "id": 19,
+      "user": 1,
+      "action": "profile_updated",
+      "description": "User updated their profile information",
+      "metadata": {
+        "username": "admin"
+      },
+      "created_at": "2026-02-13T01:54:21.162022+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 18,
+    "fields": {
+      "id": 18,
+      "user": 1,
+      "action": "profile_updated",
+      "description": "User updated their profile information",
+      "metadata": {
+        "username": "admin"
+      },
+      "created_at": "2026-02-13T01:48:31.123253+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 17,
+    "fields": {
+      "id": 17,
+      "user": 1,
+      "action": "theme_changed",
+      "description": "Changed theme from New theme to Default",
+      "metadata": {
+        "old_theme": "New theme",
+        "new_theme": "Default"
+      },
+      "created_at": "2026-02-13T01:48:00.705131+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 16,
+    "fields": {
+      "id": 16,
+      "user": 1,
+      "action": "theme_changed",
+      "description": "Changed theme from newtewt to New theme",
+      "metadata": {
+        "old_theme": "newtewt",
+        "new_theme": "New theme"
+      },
+      "created_at": "2026-02-13T01:47:58.186865+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 15,
+    "fields": {
+      "id": 15,
+      "user": 1,
+      "action": "theme_changed",
+      "description": "Changed theme from Default to newtewt",
+      "metadata": {
+        "old_theme": "Default",
+        "new_theme": "newtewt"
+      },
+      "created_at": "2026-02-13T01:47:45.905915+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 14,
+    "fields": {
+      "id": 14,
+      "user": 1,
+      "action": "theme_created",
+      "description": "Created new theme: newtewt",
+      "metadata": {
+        "theme_name": "newtewt",
+        "theme_id": 3
+      },
+      "created_at": "2026-02-13T01:47:44.110284+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 13,
+    "fields": {
+      "id": 13,
+      "user": 1,
+      "action": "theme_changed",
+      "description": "Changed theme from New theme to Default",
+      "metadata": {
+        "old_theme": "New theme",
+        "new_theme": "Default"
+      },
+      "created_at": "2026-02-13T01:47:01.120726+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 12,
+    "fields": {
+      "id": 12,
+      "user": 1,
+      "action": "theme_changed",
+      "description": "Changed theme from Default to New theme",
+      "metadata": {
+        "old_theme": "Default",
+        "new_theme": "New theme"
+      },
+      "created_at": "2026-02-13T01:46:48.612935+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 11,
+    "fields": {
+      "id": 11,
+      "user": 1,
+      "action": "theme_changed",
+      "description": "Changed theme from New theme to Default",
+      "metadata": {
+        "old_theme": "New theme",
+        "new_theme": "Default"
+      },
+      "created_at": "2026-02-13T01:39:33.109592+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 10,
+    "fields": {
+      "id": 10,
+      "user": 1,
+      "action": "theme_changed",
+      "description": "Changed theme from Default to New theme",
+      "metadata": {
+        "old_theme": "Default",
+        "new_theme": "New theme"
+      },
+      "created_at": "2026-02-13T01:39:30.409914+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 9,
+    "fields": {
+      "id": 9,
+      "user": 1,
+      "action": "theme_created",
+      "description": "Created new theme: cdzv",
+      "metadata": {
+        "theme_name": "cdzv",
+        "theme_id": 3
+      },
+      "created_at": "2026-02-13T01:39:21.989828+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 8,
+    "fields": {
+      "id": 8,
+      "user": 1,
+      "action": "theme_changed",
+      "description": "Changed theme from New theme to Default",
+      "metadata": {
+        "old_theme": "New theme",
+        "new_theme": "Default"
+      },
+      "created_at": "2026-02-13T01:39:06.711089+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 7,
+    "fields": {
+      "id": 7,
+      "user": 1,
+      "action": "theme_changed",
+      "description": "Changed theme from Default to New theme",
+      "metadata": {
+        "old_theme": "Default",
+        "new_theme": "New theme"
+      },
+      "created_at": "2026-02-13T01:38:57.277668+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 6,
+    "fields": {
+      "id": 6,
+      "user": 1,
+      "action": "theme_changed",
+      "description": "Changed theme from New theme to Default",
+      "metadata": {
+        "old_theme": "New theme",
+        "new_theme": "Default"
+      },
+      "created_at": "2026-02-13T01:38:55.004869+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "user": 1,
+      "action": "theme_changed",
+      "description": "Changed theme from Default to New theme",
+      "metadata": {
+        "old_theme": "Default",
+        "new_theme": "New theme"
+      },
+      "created_at": "2026-02-13T01:38:40.817952+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "user": 1,
+      "action": "theme_changed",
+      "description": "Changed theme from New theme to Default",
+      "metadata": {
+        "old_theme": "New theme",
+        "new_theme": "Default"
+      },
+      "created_at": "2026-02-13T01:38:33.806935+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "user": 1,
+      "action": "theme_changed",
+      "description": "Changed theme from Default to New theme",
+      "metadata": {
+        "old_theme": "Default",
+        "new_theme": "New theme"
+      },
+      "created_at": "2026-02-13T01:38:11.202992+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "user": 1,
+      "action": "theme_changed",
+      "description": "Changed theme from New theme to Default",
+      "metadata": {
+        "old_theme": "New theme",
+        "new_theme": "Default"
+      },
+      "created_at": "2026-02-13T01:31:56.275754+00:00"
+    }
+  },
+  {
+    "model": "profiles.activity",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "user": 1,
+      "action": "theme_changed",
+      "description": "Changed theme from Default to New theme",
+      "metadata": {
+        "old_theme": "Default",
+        "new_theme": "New theme"
+      },
+      "created_at": "2026-02-13T01:30:49.474600+00:00"
+    }
+  },
+  {
+    "model": "calendar_app.task",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "user": 1,
+      "title": "Adding New Features",
+      "description": "Adding New Features",
+      "date": "2026-02-19",
+      "start_time": "08:09:00",
+      "end_time": "16:09:00",
+      "priority": "high",
+      "completed": false,
+      "created_at": "2026-02-19T02:09:50.458627+00:00",
+      "updated_at": "2026-02-19T02:09:50.458653+00:00"
+    }
+  },
+  {
+    "model": "calendar_app.task",
+    "pk": 6,
+    "fields": {
+      "id": 6,
+      "user": 1,
+      "title": "Future tasks pending",
+      "description": "Future tasks pending",
+      "date": "2026-02-20",
+      "start_time": "08:00:00",
+      "end_time": "17:00:00",
+      "priority": "medium",
+      "completed": false,
+      "created_at": "2026-02-19T04:52:06.148595+00:00",
+      "updated_at": "2026-02-19T04:52:06.148628+00:00"
+    }
+  },
+  {
+    "model": "projects_app.project",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "user": 1,
+      "title": "gkjhgkh",
+      "description": "hbljhil",
+      "url": "https://docs.google.com/spreadsheets/d/18pnUW98oNlwwPHDp_68BdfEqQgL9yMnulhNPhjNYsFA/edit?gid=0#gid=0",
+      "collection": 1,
+      "status": "completed",
+      "due_date": "2026-02-20",
+      "progress": 100,
+      "is_pinned": false,
+      "created_at": "2026-02-20T02:13:57.656313+00:00",
+      "updated_at": "2026-02-20T02:21:05.986575+00:00"
+    }
+  },
+  {
+    "model": "projects_app.collection",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "user": 1,
+      "name": "fdsfsdfg",
+      "description": "sfdgsdfgdsfg",
+      "color": "#22c55e",
+      "created_at": "2026-02-20T02:20:53.664710+00:00"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "password": "pbkdf2_sha256$1000000$LvsBDsL3Pa1zhhOEYesziH$nmaMg+Tl7uaZ1IZxPTHJ7EzCrFMaTEJ4kQw3WIphh0k=",
+      "last_login": "2026-02-19T01:29:42.590569+00:00",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Josiah",
+      "last_name": "Ratunil",
+      "email": "ratunil.josiah30@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-02-12T00:32:09.738394+00:00"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "id": 9,
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "id": 10,
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "id": 11,
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "id": 12,
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "id": 6,
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "id": 7,
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "id": 8,
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "id": 13,
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "id": 14,
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "id": 15,
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "id": 16,
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "id": 61,
+      "name": "Can add task",
+      "content_type": 16,
+      "codename": "add_task"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "id": 62,
+      "name": "Can change task",
+      "content_type": 16,
+      "codename": "change_task"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "id": 63,
+      "name": "Can delete task",
+      "content_type": 16,
+      "codename": "delete_task"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "id": 64,
+      "name": "Can view task",
+      "content_type": 16,
+      "codename": "view_task"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "id": 17,
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "id": 18,
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "id": 19,
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "id": 20,
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "id": 49,
+      "name": "Can add user dashboard module",
+      "content_type": 13,
+      "codename": "add_userdashboardmodule"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "id": 50,
+      "name": "Can change user dashboard module",
+      "content_type": 13,
+      "codename": "change_userdashboardmodule"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "id": 51,
+      "name": "Can delete user dashboard module",
+      "content_type": 13,
+      "codename": "delete_userdashboardmodule"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "id": 52,
+      "name": "Can view user dashboard module",
+      "content_type": 13,
+      "codename": "view_userdashboardmodule"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "id": 57,
+      "name": "Can add photo",
+      "content_type": 15,
+      "codename": "add_photo"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "id": 58,
+      "name": "Can change photo",
+      "content_type": 15,
+      "codename": "change_photo"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "id": 59,
+      "name": "Can delete photo",
+      "content_type": 15,
+      "codename": "delete_photo"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "id": 60,
+      "name": "Can view photo",
+      "content_type": 15,
+      "codename": "view_photo"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "id": 41,
+      "name": "Can add bookmark",
+      "content_type": 11,
+      "codename": "add_bookmark"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "id": 42,
+      "name": "Can change bookmark",
+      "content_type": 11,
+      "codename": "change_bookmark"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "id": 43,
+      "name": "Can delete bookmark",
+      "content_type": 11,
+      "codename": "delete_bookmark"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "id": 44,
+      "name": "Can view bookmark",
+      "content_type": 11,
+      "codename": "view_bookmark"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "id": 45,
+      "name": "Can add pinned application",
+      "content_type": 12,
+      "codename": "add_pinnedapplication"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "id": 46,
+      "name": "Can change pinned application",
+      "content_type": 12,
+      "codename": "change_pinnedapplication"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "id": 47,
+      "name": "Can delete pinned application",
+      "content_type": 12,
+      "codename": "delete_pinnedapplication"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "id": 48,
+      "name": "Can view pinned application",
+      "content_type": 12,
+      "codename": "view_pinnedapplication"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "id": 69,
+      "name": "Can add folder",
+      "content_type": 18,
+      "codename": "add_folder"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "id": 70,
+      "name": "Can change folder",
+      "content_type": 18,
+      "codename": "change_folder"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "id": 71,
+      "name": "Can delete folder",
+      "content_type": 18,
+      "codename": "delete_folder"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "id": 72,
+      "name": "Can view folder",
+      "content_type": 18,
+      "codename": "view_folder"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+      "id": 73,
+      "name": "Can add note",
+      "content_type": 19,
+      "codename": "add_note"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+      "id": 74,
+      "name": "Can change note",
+      "content_type": 19,
+      "codename": "change_note"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+      "id": 75,
+      "name": "Can delete note",
+      "content_type": 19,
+      "codename": "delete_note"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+      "id": 76,
+      "name": "Can view note",
+      "content_type": 19,
+      "codename": "view_note"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+      "id": 77,
+      "name": "Can add note image",
+      "content_type": 20,
+      "codename": "add_noteimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+      "id": 78,
+      "name": "Can change note image",
+      "content_type": 20,
+      "codename": "change_noteimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+      "id": 79,
+      "name": "Can delete note image",
+      "content_type": 20,
+      "codename": "delete_noteimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+      "id": 80,
+      "name": "Can view note image",
+      "content_type": 20,
+      "codename": "view_noteimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "id": 65,
+      "name": "Can add tag",
+      "content_type": 17,
+      "codename": "add_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "id": 66,
+      "name": "Can change tag",
+      "content_type": 17,
+      "codename": "change_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "id": 67,
+      "name": "Can delete tag",
+      "content_type": 17,
+      "codename": "delete_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "id": 68,
+      "name": "Can view tag",
+      "content_type": 17,
+      "codename": "view_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "id": 53,
+      "name": "Can add activity",
+      "content_type": 14,
+      "codename": "add_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "id": 54,
+      "name": "Can change activity",
+      "content_type": 14,
+      "codename": "change_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "id": 55,
+      "name": "Can delete activity",
+      "content_type": 14,
+      "codename": "delete_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "id": 56,
+      "name": "Can view activity",
+      "content_type": 14,
+      "codename": "view_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "id": 37,
+      "name": "Can add theme",
+      "content_type": 10,
+      "codename": "add_theme"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "id": 38,
+      "name": "Can change theme",
+      "content_type": 10,
+      "codename": "change_theme"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "id": 39,
+      "name": "Can delete theme",
+      "content_type": 10,
+      "codename": "delete_theme"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "id": 40,
+      "name": "Can view theme",
+      "content_type": 10,
+      "codename": "view_theme"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "id": 33,
+      "name": "Can add user profile",
+      "content_type": 9,
+      "codename": "add_userprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "id": 34,
+      "name": "Can change user profile",
+      "content_type": 9,
+      "codename": "change_userprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "id": 35,
+      "name": "Can delete user profile",
+      "content_type": 9,
+      "codename": "delete_userprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "id": 36,
+      "name": "Can view user profile",
+      "content_type": 9,
+      "codename": "view_userprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 85,
+    "fields": {
+      "id": 85,
+      "name": "Can add collection",
+      "content_type": 22,
+      "codename": "add_collection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 86,
+    "fields": {
+      "id": 86,
+      "name": "Can change collection",
+      "content_type": 22,
+      "codename": "change_collection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 87,
+    "fields": {
+      "id": 87,
+      "name": "Can delete collection",
+      "content_type": 22,
+      "codename": "delete_collection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 88,
+    "fields": {
+      "id": 88,
+      "name": "Can view collection",
+      "content_type": 22,
+      "codename": "view_collection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+      "id": 81,
+      "name": "Can add project",
+      "content_type": 21,
+      "codename": "add_project"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+      "id": 82,
+      "name": "Can change project",
+      "content_type": 21,
+      "codename": "change_project"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+      "id": 83,
+      "name": "Can delete project",
+      "content_type": 21,
+      "codename": "delete_project"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+      "id": 84,
+      "name": "Can view project",
+      "content_type": 21,
+      "codename": "view_project"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 89,
+    "fields": {
+      "id": 89,
+      "name": "Can add tag",
+      "content_type": 23,
+      "codename": "add_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 90,
+    "fields": {
+      "id": 90,
+      "name": "Can change tag",
+      "content_type": 23,
+      "codename": "change_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 91,
+    "fields": {
+      "id": 91,
+      "name": "Can delete tag",
+      "content_type": 23,
+      "codename": "delete_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 92,
+    "fields": {
+      "id": 92,
+      "name": "Can view tag",
+      "content_type": 23,
+      "codename": "view_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "id": 21,
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "id": 22,
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "id": 23,
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "id": 24,
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "id": 25,
+      "name": "Can add Blacklisted Token",
+      "content_type": 7,
+      "codename": "add_blacklistedtoken"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "id": 26,
+      "name": "Can change Blacklisted Token",
+      "content_type": 7,
+      "codename": "change_blacklistedtoken"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "id": 27,
+      "name": "Can delete Blacklisted Token",
+      "content_type": 7,
+      "codename": "delete_blacklistedtoken"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "id": 28,
+      "name": "Can view Blacklisted Token",
+      "content_type": 7,
+      "codename": "view_blacklistedtoken"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "id": 29,
+      "name": "Can add Outstanding Token",
+      "content_type": 8,
+      "codename": "add_outstandingtoken"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "id": 30,
+      "name": "Can change Outstanding Token",
+      "content_type": 8,
+      "codename": "change_outstandingtoken"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "id": 31,
+      "name": "Can delete Outstanding Token",
+      "content_type": 8,
+      "codename": "delete_outstandingtoken"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "id": 32,
+      "name": "Can view Outstanding Token",
+      "content_type": 8,
+      "codename": "view_outstandingtoken"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "id": 6,
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "id": 7,
+      "app_label": "token_blacklist",
+      "model": "blacklistedtoken"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "id": 8,
+      "app_label": "token_blacklist",
+      "model": "outstandingtoken"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "id": 9,
+      "app_label": "profiles",
+      "model": "userprofile"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "id": 10,
+      "app_label": "profiles",
+      "model": "theme"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "id": 11,
+      "app_label": "jet",
+      "model": "bookmark"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "id": 12,
+      "app_label": "jet",
+      "model": "pinnedapplication"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "id": 13,
+      "app_label": "dashboard",
+      "model": "userdashboardmodule"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "id": 14,
+      "app_label": "profiles",
+      "model": "activity"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "id": 15,
+      "app_label": "gallery",
+      "model": "photo"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+      "id": 16,
+      "app_label": "calendar_app",
+      "model": "task"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+      "id": 17,
+      "app_label": "notes_app",
+      "model": "tag"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+      "id": 18,
+      "app_label": "notes_app",
+      "model": "folder"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+      "id": 19,
+      "app_label": "notes_app",
+      "model": "note"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+      "id": 20,
+      "app_label": "notes_app",
+      "model": "noteimage"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 21,
+    "fields": {
+      "id": 21,
+      "app_label": "projects_app",
+      "model": "project"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 22,
+    "fields": {
+      "id": 22,
+      "app_label": "projects_app",
+      "model": "collection"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 23,
+    "fields": {
+      "id": 23,
+      "app_label": "projects_app",
+      "model": "tag"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "dn3ofreuggrudgnxy899hjdbrgmp40x0",
+    "fields": {
+      "session_key": "dn3ofreuggrudgnxy899hjdbrgmp40x0",
+      "session_data": ".eJxVjEEOwiAQRe_C2hDKMAVcuu8ZyMCgVA0kpV0Z765NutDtf-_9lwi0rSVsPS9hZnEWgzj9bpHSI9cd8J3qrcnU6rrMUe6KPGiXU-P8vBzu30GhXr41eIVAyDTGBIhIoH1El10ktEZZm0fjEbQlTt7AwODAoNI6XzUk8uL9AcGtNuM:1vssrO:debc_r8sGPUUEsl49dh68E1A4YfoB36FvEneB5C6_ts",
+      "expire_date": "2026-03-05T01:29:42.597556+00:00"
+    }
+  }
+]

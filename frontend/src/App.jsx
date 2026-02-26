@@ -14,6 +14,7 @@ import Gallery from './pages/Gallery';
 import Notes from './pages/Notes';
 import Calendar from './pages/Calendar';
 import Themes from './pages/Themes';
+import HabitTracker from './pages/HabitTracker';
 
 import Layout from './components/Layout';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -53,6 +54,7 @@ const ThemedApp = () => {
                     <Route path="/notes" element={<Notes />} />
                     <Route path="/calendar" element={<Calendar />} />
                     <Route path="/themes" element={<Themes />} />
+                    <Route path="/projects/habit-tracker" element={<HabitTracker />} />
                     <Route path="/" element={<Navigate to="/dashboard" replace />} />
                   </Routes>
                 </Layout>

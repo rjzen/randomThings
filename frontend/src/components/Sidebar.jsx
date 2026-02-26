@@ -11,6 +11,7 @@ import {
   XMarkIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
+  FireIcon,
 } from '@heroicons/react/24/outline';
 
 const sidebarItems = [
@@ -32,6 +33,12 @@ const sidebarItems = [
     icon: FolderIcon,
     current: (pathname) => pathname === '/projects',
   },
+  // {
+  //   name: 'Habit Tracker',
+  //   href: '/projects/habit-tracker',
+  //   icon: FireIcon,
+  //   current: (pathname) => pathname === '/projects/habit-tracker',
+  // },
   {
     name: 'Gallery',
     href: '/gallery',
